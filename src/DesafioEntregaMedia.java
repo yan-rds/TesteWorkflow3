@@ -53,12 +53,12 @@ public class DesafioEntregaMedia {
                                     telefone = leitor.nextLine();
                                     System.out.println("E-mail");
                                     email = leitor.next();
-                                    cadastro.put(cpf, "Nome do funcionário: " + nome + "\n" + "Dados de contato - "
+                                    cadastro.put(cpf, "Nmudei aquiome do funcionário: " + nome + "\n" + "Dados de contato - "
                                             + "Telefone: " + telefone + " E-mail: " + email);
                                 }
                             }
                             System.out.println();
-                            System.out.println("Deseja inserir mais algum funcionário? Responda com Sim ou Não");
+                            System.out.println("Dmudei aquiinserir mais algum funcionário? Responda com Sim ou Não");
                             confirmarADD = leitor.next();
                         }
                         break;
@@ -68,7 +68,7 @@ public class DesafioEntregaMedia {
                         }
                         break;
                     default: // Número inválido
-                        System.out.println("Você digitou uma opção inválida");
+                        System.out.println("Você dmelhorei aquiopção inválida");
                 }
                 System.out.println("Deseja voltar ao menu principal? Responda com Sim ou Não");
                 repeticaoMenu = leitor.next();
