@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class DesafioEntregaMedia {
             public static void main(String[] args) {
             Scanner leitor = new Scanner(System.in);
-
+            // Branch feature criada
             // Variáveis
             int escolhaMenu;
             int qtdeFuncionariosADD;
@@ -42,20 +42,25 @@ public class DesafioEntregaMedia {
                             for (int i = 1; i <= qtdeFuncionariosADD; i++) {
                                 System.out.println("Por favor insira o CPF do funcionário");
                                 cpf = leitor.next();
-                                System.out.println("Nome");
-                                leitor.nextLine();
-                                nome = leitor.nextLine();
-                                System.out.println("Telefone");
-                                telefone = leitor.nextLine();
-                                System.out.println("E-mail");
-                                email = leitor.next();
-                                cadastro.put(cpf, "Nome do funcionário: " + nome + "\n" + "Dados de contato - "
-                                        + "Telefone: " + telefone + " E-mail: " + email);
+                                // Condicional que verificará se o CPF é repetido
+                                if (cadastro.containsKey(cpf)) {
+                                    System.out.print("Este CPF já foi cadastrado");
+                                } else {
+                                    System.out.println("Nome");
+                                    leitor.nextLine();
+                                    nome = leitor.nextLine();
+                                    System.out.println("Telefone");
+                                    telefone = leitor.nextLine();
+                                    System.out.println("E-mail");
+                                    email = leitor.next();
+                                    cadastro.put(cpf, "Nmudei aquiome do funcionário: " + nome + "\n" + "Dados de contato - "
+                                            + "Telefone: " + telefone + " E-mail: " + email);
+                                }
                             }
+                            System.out.println();
+                            System.out.println("Dmudei aquiinserir mais algum funcionário? Responda com Sim ou Não");
+                            confirmarADD = leitor.next();
                         }
-                        System.out.println();
-                        System.out.println("Deseja inserir mais algum funcionário? Responda com Sim ou Não");
-                        confirmarADD = leitor.next();
                         break;
                     case 2: // Exibir a lista de funcionários
                         for (String referencia : cadastro.values()) {
@@ -63,7 +68,7 @@ public class DesafioEntregaMedia {
                         }
                         break;
                     default: // Número inválido
-                        System.out.println("Você digitou uma opção inválida");
+                        System.out.println("Você dmelhorei aquiopção inválida");
                 }
                 System.out.println("Deseja voltar ao menu principal? Responda com Sim ou Não");
                 repeticaoMenu = leitor.next();
